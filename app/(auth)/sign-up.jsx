@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'expo-router'
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, ScrollView, Alert, Image } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { images } from '../../constants'
@@ -17,7 +17,23 @@ const SignUp = () => {
   });
 
   const submit = async () => {
-    createUser();
+    if (form.username === '' || form.email === '' || form.password === '') {
+      Alert.alert('Error', 'Please fill in all fields');
+    }
+
+    setSubmitting(true);
+
+    try {
+      const result = await createUser(form.email, form.password, form.username);
+      setUser(result);
+      setIsLogged(true);
+
+      router.replace('/home');
+    } catch (error) {
+      Alert.alert('Error', error.message);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -47,7 +63,7 @@ const SignUp = () => {
             otherStyles="mt-7"
           />
           <CustomButton
-            title="Sign In"
+            title="Sign Up"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
