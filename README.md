@@ -2,13 +2,13 @@
 
 A custom built app that uses React Native and Expo to develop mobile applications. This application provides the ability to upload thumbnails and videos as a logged in user, with the ability to search and view the videos using a horizontal and vertical scroller.
 
-![Alt text](/screenshots/readme-img-1.PNG "Screenshot 1")
-![Alt text](/screenshots/readme-img-2.PNG "Screenshot 2")
-![Alt text](/screenshots/readme-img-3.PNG "Screenshot 3")
-![Alt text](/screenshots/readme-img-4.PNG "Screenshot 4")
-![Alt text](/screenshots/readme-img-5.PNG "Screenshot 5")
-![Alt text](/screenshots/readme-img-6.PNG "Screenshot 6")
-![Alt text](/screenshots/readme-img-7.PNG "Screenshot 7")
+![Alt text](/screenshots/readme-img-1.PNG "Screenshot 1" =100x20))
+![Alt text](/screenshots/readme-img-2.PNG "Screenshot 2" =100x20))
+![Alt text](/screenshots/readme-img-3.PNG "Screenshot 3" =100x20))
+![Alt text](/screenshots/readme-img-4.PNG "Screenshot 4" =100x20))
+![Alt text](/screenshots/readme-img-5.PNG "Screenshot 5" =100x20))
+![Alt text](/screenshots/readme-img-6.PNG "Screenshot 6" =100x20))
+![Alt text](/screenshots/readme-img-7.PNG "Screenshot 7" =100x20))
 
 ## Installation
 
