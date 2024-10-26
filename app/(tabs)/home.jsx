@@ -5,8 +5,10 @@ import { images } from '../../constants'
 import useAppWrite from '../../lib/useAppWrite'
 import { getAllPosts, getLatestPosts } from '../../lib/appwrite'
 import { EmptyState, SearchInput, Trending, VideoCard } from '../../components'
+import { useGlobalContext } from '../../context/GlobalProvider'
 
 const Home = () => {
+  const { user } = useGlobalContext();
   const { data: posts, refetch } = useAppWrite(getAllPosts);
   const { data: latestPosts } = useAppWrite(getLatestPosts);
 
@@ -40,7 +42,7 @@ const Home = () => {
                   Welcome Back
                 </Text>
                 <Text className="text-2xl font-psemibold text-white">
-                  JSMastery
+                  {user?.username}
                 </Text>
               </View>
 
